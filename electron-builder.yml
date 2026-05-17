@@ -1,0 +1,26 @@
+appId: com.deepseek.desktop
+productName: DeepSeek Desktop
+electronDist: F:\electron-v42.1.0-win32-x64
+directories:
+  output: release
+files:
+  - dist-electron/**/*
+  - package.json
+win:
+  target: dir
+  icon: build/icon.ico
+  signAndEditExecutable: false
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+mac:
+  target: dmg
+  icon: build/icon.icns
+linux:
+  target: AppImage
+  icon: build/icon.png
+# ✅ 自动更新配置 - 请替换为实际的 GitHub 仓库信息
+# publish:
+#   provider: github
+#   owner: YOUR_GITHUB_USERNAME
+#   repo: deepseek-desktop
